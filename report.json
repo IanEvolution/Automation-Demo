@@ -1,0 +1,79 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "qa-wolf-questions-and-automations;question-1:-validate-that-exactly-the-first-100-articles-are-sorted-from-newest-to-oldest",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Question 1: validate that EXACTLY the first 100 articles are sorted from newest to oldest",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 323233800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "Open the page \"https://news.ycombinator.com/\"",
+            "match": {
+              "location": "automation-actions\\common.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 354845999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "click on the new link",
+            "match": {
+              "location": "automation-actions\\steps.js:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113692499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "assert that all the articles are sorted from newest to oldest",
+            "match": {
+              "location": "automation-actions\\steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44294800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 120009299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "qa-wolf-questions-and-automations",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "QA Wolf Questions and Automations",
+    "tags": [],
+    "uri": "feature-file\\questions.feature"
+  }
+]
