@@ -1,11 +1,12 @@
+require('dotenv').config();
 const { chromium } = require('playwright');
 let browser = null;
 let page = null;
-const defaultTimeout = 20000;
+const defaultTimeout = Number(process.env.DEFAULT_TIMEOUT) || 20000;
 
 async function initializeBrowser() {
     if(!browser) {
-        browser = await chromium.launch({ headless: false });
+        browser = await chromium.launch({ headless: process.env.HEADLESS === 'true' });
     }
 }
 

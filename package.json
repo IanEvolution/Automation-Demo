@@ -3,14 +3,20 @@
     "playwright": "^1.54.2"
   },
   "scripts": {
-    "test": "cucumber-js feature-file/questions.feature --require automation-actions/hooks.js --require automation-actions/common.js --require automation-actions/steps.js --format pretty --exit"
+    "home": "cucumber-js feature-file/HomePageSuite.feature --require automation-actions/hooks.js --require automation-actions/common.js --require automation-actions/steps.js --exit",
+    "login": "cucumber-js feature-file/LoginPageSuite.feature --require automation-actions/hooks.js --require automation-actions/common.js --require automation-actions/steps.js --exit",
+    "hero": "cucumber-js feature-file/LoginHEROPageSuite.feature --require automation-actions/hooks.js --require automation-actions/common.js --require automation-actions/steps.js --exit",
+    "all": "cucumber-js feature-file/HomePageSuite.feature feature-file/LoginPageSuite.feature feature-file/LoginHEROPageSuite.feature --require automation-actions/hooks.js --require automation-actions/common.js --require automation-actions/steps.js --format json:reports/cucumber_report.json --exit",
+    "report": "node generate-report.js && start reports/html/index.html"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^12.1.0",
     "@cucumber/pretty-formatter": "^2.0.1",
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.2.1",
-    "cucumber-html-reporter": "^6.0.0",
+    "cucumber-html-reporter": "^5.0.2",
+    "dotenv": "^18.0.5",
+    "multiple-cucumber-html-reporter": "^4.1.0",
     "ts-node": "^10.9.2"
   }
 }
